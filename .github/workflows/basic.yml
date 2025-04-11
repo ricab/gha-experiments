@@ -12,8 +12,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-      filter: "${{ github.action }}-\
-        ${{ github.action }}"
+      with:
+        filter: "${{ github.action }}-\
+          ${{ github.action }}"
 
     - name: Hello World step
       run: echo "Hello, GitHub Actions!"
