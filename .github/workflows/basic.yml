@@ -22,7 +22,7 @@ jobs:
         echo "Branch: ${{ github.ref }}"
 
     - name: Test command splitting
-      run: >
+      run: |
         echo -n "Some "
         echo "string"
         echo "and another"
