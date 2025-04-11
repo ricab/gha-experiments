@@ -23,6 +23,6 @@ jobs:
 
     - name: Test command splitting
       run: >
-        echo "Some
-          string"
+        echo -n "Some "
+        echo "string"
         echo "and another"
