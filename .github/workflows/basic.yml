@@ -22,6 +22,9 @@ jobs:
         echo "Branch: ${{ github.ref }}"
 
     - name: Test command splitting
+      bar: "very"
+      baz: "a-very-${{ bar }}-${{ bar }}-\
+        ${{ bar }}-long-single-word"
       run: |
         echo -n "Some "
         echo "string"
