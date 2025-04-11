@@ -12,9 +12,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-      with:
-        filter: "${{ github.action }}-\
-          ${{ github.action }}"
 
     - name: Hello World step
       run: echo "Hello, GitHub Actions!"
@@ -31,3 +28,11 @@ jobs:
         echo "and another"
         foo=something
         echo "${foo}"
+
+    - name: test cmd splitting again
+      run: >
+        echo "start"
+
+        echo "foo-
+        bar "
+        and baz
