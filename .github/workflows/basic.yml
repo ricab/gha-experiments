@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Hello World step
       run: echo "Hello, GitHub Actions!"
@@ -20,3 +20,19 @@ jobs:
       run: |
         echo "Repository: ${{ github.repository }}"
         echo "Branch: ${{ github.ref }}"
+
+    - name: Test command splitting
+      run: |
+        echo -n "Some "
+        echo "string"
+        echo "and another"
+        foo=something
+        echo "${foo}"
+
+    - name: test cmd splitting again
+      run: >
+        echo "start"
+
+        echo "foo-
+        bar "
+        and baz
