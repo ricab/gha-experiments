@@ -26,3 +26,5 @@ jobs:
         echo -n "Some "
         echo "string"
         echo "and another"
+        foo=something
+        echo "${foo}"
