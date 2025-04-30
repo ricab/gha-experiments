@@ -17,4 +17,3 @@ jobs:
           echo "Event Type: ${{ github.event.workflow_run.conclusion }}"
           echo "Repository: ${{ github.repository }}"
           echo "Branch: ${{ github.ref }}"
-          echo "Event: ${{ toJson(github.event) }}"
